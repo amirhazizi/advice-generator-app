@@ -13,6 +13,7 @@ html {
 }
 
 img {
+  width: 100%;
   display: block;
 }
 
@@ -38,4 +39,63 @@ footer {
 .attribution a {
   font-weight: bold;
   color: hsl(228deg, 45%, 44%);
+}
+
+body {
+  background: hsl(218deg, 23%, 16%);
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  color: white;
+  text-align: center;
+  width: 90vw;
+  max-width: 450px;
+}
+main .advice {
+  position: relative;
+  padding: 1.5rem 0.7rem;
+  padding-bottom: 2.2rem;
+  background: hsl(217deg, 19%, 24%);
+  border-radius: 10px;
+}
+main .advice-id {
+  color: hsl(150deg, 100%, 66%);
+  font-size: 0.35rem;
+  letter-spacing: 0.2rem;
+  margin-bottom: 0.7rem;
+}
+main .advice-text {
+  position: relative;
+  font-size: 0.9rem;
+  color: hsl(193deg, 38%, 86%);
+  padding-bottom: 0.7rem;
+}
+main .advice-separat-mobile {
+  padding: 0 0.5rem;
+}
+main .advice-separat-desktop {
+  padding: 0 0.5rem;
+  display: none;
+}
+main .advice-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background: hsl(150deg, 100%, 66%);
+  padding: 0.7rem;
+  border: none;
+  border-radius: 500px;
+}
+
+@media (min-width: 768px) {
+  main .advice-separat-mobile {
+    display: none;
+  }
+  main .advice-separat-desktop {
+    display: block;
+  }
 }
