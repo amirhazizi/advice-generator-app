@@ -28,8 +28,9 @@ footer {
   bottom: 0%;
   left: 50%;
   transform: translate(-50%, 0);
-  background: white;
-  padding: 0.2rem 0.7rem;
+  background: hsl(217deg, 19%, 38%);
+  color: white;
+  padding: 0.2rem 0.5rem;
   font-size: 11px;
   text-align: center;
   border-top-left-radius: 15px;
@@ -38,7 +39,7 @@ footer {
 
 .attribution a {
   font-weight: bold;
-  color: hsl(228deg, 45%, 44%);
+  color: hsl(150deg, 100%, 66%);
 }
 
 body {
@@ -71,7 +72,7 @@ main .advice-text {
   position: relative;
   font-size: 0.9rem;
   color: hsl(193deg, 38%, 86%);
-  padding-bottom: 0.7rem;
+  padding-bottom: 1rem;
 }
 main .advice-separat-mobile {
   padding: 0 0.5rem;
