@@ -53,7 +53,7 @@ main {
   color: white;
   text-align: center;
   width: 90vw;
-  max-width: 450px;
+  max-width: 550px;
 }
 main .advice {
   position: relative;
@@ -93,6 +93,15 @@ main .advice-btn {
 }
 
 @media (min-width: 768px) {
+  main .advice {
+    padding-bottom: 2.5rem;
+  }
+  main .advice-id {
+    font-size: 0.4rem;
+  }
+  main .advice-text {
+    font-size: 1.2rem;
+  }
   main .advice-separat-mobile {
     display: none;
   }
