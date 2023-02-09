@@ -1,21 +1,28 @@
 const adviceID = getElement("#advice-id")
 const adviceText = getElement("#advice-text")
 const adviceBtn = getElement("#advice-btn")
-// get advice api
+// button eventlistener
+adviceBtn.addEventListener("click", () => getAdvice())
+// function api
+function getAdvice() {
+  fetch("https://api.adviceslip.com/advice")
+    .then((res) => res.json())
+    .then((data) => {
+      setAdvice(data.slip)
+    })
+}
+// domcontent loaded advice
 fetch("https://api.adviceslip.com/advice")
   .then((res) => res.json())
-  .then((data) => getAdvice(data.slip))
-//   function api
-function getAdvice(obj) {
-  const id = obj.id
-  const text = obj.advice
+  .then((data) => {
+    setAdvice(data.slip)
+  })
+// set advice function
+function setAdvice(data) {
+  const id = data.id
+  const text = data.advice
   adviceID.textContent = id
   adviceText.textContent = text
-  adviceBtn.addEventListener("click", () => {
-    fetch("https://api.adviceslip.com/advice")
-      .then((res) => res.json())
-      .then((data) => getAdvice(data.slip))
-  })
 }
 // get element checker
 function getElement(selection) {
